@@ -1,18 +1,18 @@
 import numpy as np
 import tensorflow as tf
-import cancer_data
+import flight_data
 import time
 import random
     
-x = cancer_data.feature
-y = cancer_data.label
+x = flight_data.feature
+y = flight_data.label
 
 epochs = 100
 batch_size = 100
 
 input_num_units = x.shape[1]
-hidden_num_units_1 = 50
-hidden_num_units_2 = 10
+hidden_num_units_1 = 210
+hidden_num_units_2 = 300
 num_class = y.shape[1]
 
 sess = tf.InteractiveSession()

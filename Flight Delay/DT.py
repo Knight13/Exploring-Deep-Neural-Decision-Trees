@@ -1,6 +1,6 @@
 import numpy as np
 import random
-import titanic_data
+import flight_data
 import tensorflow as tf
 from sklearn import tree
 from sklearn.model_selection import KFold
@@ -8,8 +8,8 @@ from sklearn.metrics import log_loss
 import time
 
 
-x = titanic_data.feature
-y = titanic_data.label
+x = flight_data.feature
+y = flight_data.label
 
 epochs = 100
 

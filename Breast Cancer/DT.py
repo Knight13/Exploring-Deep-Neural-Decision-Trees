@@ -11,6 +11,8 @@ import time
 x = cancer_data.feature
 y = cancer_data.label
 
+epochs = 100
+
 seed = random.seed(1990)
 kf = KFold(n_splits=100, random_state=seed, shuffle= True)
 
@@ -20,7 +22,8 @@ loss = 0
 iteration = 0
 start_time = time.time()
 
-for i in range(1000):
+for i in range(epochs):
+  
   for train_index, test_index in kf.split(x):
       
       X_train, X_test = x[train_index], x[test_index]

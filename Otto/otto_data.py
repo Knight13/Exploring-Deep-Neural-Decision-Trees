@@ -15,7 +15,8 @@ df_labels = df[cols[-1:]]
 
 df_labels = pd.concat([df_labels, pd.get_dummies(df_labels['target'], prefix = 'target')], axis = 1)
 
-
+df_labels = df_labels.drop('target', 1)
 
 feature = df_features.as_matrix()
 label = df_labels.as_matrix()
+

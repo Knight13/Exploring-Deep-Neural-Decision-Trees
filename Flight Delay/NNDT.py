@@ -1,13 +1,13 @@
 import numpy as np
 import tensorflow as tf
-import credit_data
+import flight_data
 from neural_network_decision_tree import nn_decision_tree
 import time
 
 
 
-x = credit_data.feature
-y = credit_data.label
+x = flight_data.feature
+y = flight_data.label
 d = x.shape[1]
 
 epochs = 100
