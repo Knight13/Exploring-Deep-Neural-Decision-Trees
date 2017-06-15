@@ -9,6 +9,7 @@ df = df.dropna(axis=0, how = "any" )
 
 data = df.as_matrix()
 
+
 labels = []
 for i in xrange(data.shape[0]):
     if data[i, 0] == 1.0:

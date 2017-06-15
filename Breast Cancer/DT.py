@@ -7,7 +7,6 @@ from sklearn.model_selection import KFold
 from sklearn.metrics import log_loss
 import time
 
-
 x = cancer_data.feature
 y = cancer_data.label
 
@@ -21,6 +20,7 @@ clf = tree.DecisionTreeClassifier()
 loss = 0
 iteration = 0
 start_time = time.time()
+
 
 for i in range(epochs):
   

@@ -65,9 +65,12 @@ for epoch in range(epochs):
     
     
   print "Epoch:", (epoch+1), "cost =", "{:.5f}".format(avg_cost)
-  
+                 
+batch_mask = np.random.choice(X_test.shape[0], x.shape[0]/10)
                
-print('error rate %.5f' % (1 - np.mean(np.argmax(y_pred.eval(feed_dict={x_ph: x}), axis=1) == np.argmax(y, axis=1))))
+print('error rate %.5f' % (1 - np.mean(np.argmax(y_pred.eval(feed_dict={x_ph: X_test[batch_mask].reshape(-1, X_test.shape[1])}), axis=1) == np.argmax(y_test[batch_mask].reshape(-1, y_test.shape[1]), axis=1))))
 
 print("--- %s seconds ---" % (time.time() - start_time))
+
+sess.close()
 

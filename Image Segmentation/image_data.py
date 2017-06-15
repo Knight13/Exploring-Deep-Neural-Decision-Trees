@@ -39,6 +39,7 @@ for (n,i) in enumerate(data):
     else:
         data[n][0] = [0,0,0,0,0,0,1]
 
+
 feature = np.vstack(np.array(i[1:], dtype = np.float32) for i in data)
 label = np.vstack(np.array(i[0], dtype = np.float32) for i in data)
 
