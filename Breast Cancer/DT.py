@@ -10,7 +10,7 @@ import time
 x = cancer_data.feature
 y = cancer_data.label
 
-epochs = 100
+epochs = 10
 
 seed = random.seed(1990)
 kf = KFold(n_splits=100, random_state=seed, shuffle= True)
