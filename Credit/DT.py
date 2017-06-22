@@ -19,8 +19,6 @@ start_time = time.time()
 clf = clf.fit(X_train, y_train)
       
 y_pred = clf.predict(X_test)
-        
-err.append(1 - np.mean(np.argmax(y_pred, axis=1) == np.argmax(y_test, axis=1)))
 
-print('error rate %.5f' %(np.mean(err)))
+print('error rate %.5f' %(np.mean(1 - np.mean(np.argmax(y_pred, axis=1) == np.argmax(y_test, axis=1)))))
 print("--- %s seconds ---" % (time.time() - start_time))
