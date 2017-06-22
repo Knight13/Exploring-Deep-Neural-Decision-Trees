@@ -11,8 +11,8 @@ epochs = 100
 batch_size = 100
 
 input_num_units = x.shape[1]
-hidden_num_units_1 = 50
-hidden_num_units_2 = 10
+hidden_num_units_1 = 10**5
+hidden_num_units_2 = 10**5
 num_class = y.shape[1]
 
 sess = tf.InteractiveSession()

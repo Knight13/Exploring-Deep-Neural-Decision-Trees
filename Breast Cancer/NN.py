@@ -78,8 +78,8 @@ for epoch in range(epochs):
     batch_mask = np.random.choice(X_train.shape[0], batch_size)
     
     
-    batch_x = x[batch_mask].reshape(-1, x.shape[1])
-    batch_y = y[batch_mask].reshape(-1, y.shape[1])
+    batch_x = X_train[batch_mask].reshape(-1, x.shape[1])
+    batch_y = y_train[batch_mask].reshape(-1, y.shape[1])
   
     
     _, loss_e = sess.run([train_step, loss], feed_dict={x_ph: batch_x, y_ph: batch_y})
