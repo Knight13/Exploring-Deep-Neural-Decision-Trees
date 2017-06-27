@@ -79,7 +79,6 @@ def random_forest(train_data, test_data, max_features, batch_size, epochs, *args
     pred = np.vstack(np.array(y_pred.eval(feed_dict={x_ph: X_test}), dtype = np.float32))
     orig = np.vstack(np.array(y_test, dtype = np.float32))
     
-    
     sess.close()
     
   return (pred, orig)
